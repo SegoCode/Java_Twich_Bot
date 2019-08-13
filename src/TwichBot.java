@@ -1,16 +1,15 @@
-
 import java.io.IOException;
 import org.jibble.pircbot.*;
 
 public class TwichBot extends PircBot {
 
     String oauthCode;
-    String channel = "ninja";
+    String channel;
 
-    public TwichBot(String oauthCode) {
+    public TwichBot(String oauthCode, String channel) {
+        this.channel=channel;
         connectTwich(oauthCode);
         this.setVerbose(true);
-
     }
 
     public void connectTwich(String oauthCode) {
